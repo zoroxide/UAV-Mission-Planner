@@ -89,11 +89,12 @@ class App(customtkinter.CTk):
         self.map_option_menu.set("OpenStreetMap")
         self.appearance_mode_optionemenu.set("Dark")
 
-        # set a position marker (also with a custom color and command on click)
+        # set a position marker
+        # TODO: add logic for saving waypoints in a noSQL Database
         marker_2 = self.map_widget.set_marker(52.516268, 13.377695, text="Brandenburger Tor")
         marker_3 = self.map_widget.set_marker(52.55, 13.4, text="52.55, 13.4")
 
-        # set a path
+        # set the path
         path_1 = self.map_widget.set_path([marker_2.position, marker_3.position, (52.568, 13.4), (52.569, 13.35)])
 
     def search_event(self, event=None):
