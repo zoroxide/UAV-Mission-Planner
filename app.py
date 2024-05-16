@@ -94,7 +94,7 @@ class App(customtkinter.CTk):
         marker_3 = self.map_widget.set_marker(52.55, 13.4, text="52.55, 13.4")
 
         # set a path
-        path_1 = self.map_widget.set_path([marker_2.position, marker_3.position, (52.568, 13.4), (52.569, 13.35)])
+        self.map_widget.set_path([marker_2.position, marker_3.position, (52.568, 13.4), (52.569, 13.35)])
 
     def search_event(self, event=None):
         self.map_widget.set_address(self.entry.get())
